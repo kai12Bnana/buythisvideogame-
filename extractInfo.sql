@@ -8,5 +8,5 @@ CREATE TABLE VG_Basicinfo (
 	vg_glbsale decimal(5,3) NOT NULL,
 );
 
-INSERT INTO VG_Basicinfo (vg_name, vg_year, vg_type, vg_nasale, vg_eusale, vg_jpsale, vg_othersale, vg_glbsale) SELECT Name, Year, Genre, NA_Sales, EU_Sales, JP_Sales, Other_Sales, Global_Sales FROM vgsalesinyears
+INSERT INTO VG_Basicinfo (vg_name, vg_year, vg_type, vg_nasale, vg_eusale, vg_jpsale, vg_othersale, vg_glbsale) SELECT Name, Year, Genre, NA_Sales, EU_Sales, JP_Sales, Other_Sales, Global_Sales FROM vgsalesinyear
 												                     WHERE vgplatform = vginput;
