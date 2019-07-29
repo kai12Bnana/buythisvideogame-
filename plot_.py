@@ -21,7 +21,10 @@ try:
         charset = charset
         )
     cursor = cn.cursor(MySQLdb.cursors.DictCursor)
-    cursor.execute("select * from VG_Basicinfo;")
+    cursor.execute("select * from VGsortna_info;")
     rows = cursor.fetchall()
-    lists = [[],[],[],[]]
+    lists = [[],[],[]]
     for row in rows:
+        lists[0].append(row["Name"])
+        lists[1].append(row["Year"])
+        lists[2].append(row["Tpye"])
